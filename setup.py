@@ -9,7 +9,7 @@ from distutils import ccompiler
 from setuptools import setup
 from setuptools.dist import Distribution
 from setuptools.extension import Extension
-import numpy
+
 
 cwd = os.path.abspath(os.path.dirname(__file__))
 fftwdir = os.path.join(cwd, 'mpi4py_fft', 'fftw')
@@ -36,6 +36,7 @@ def get_prefix_dirs():
     return dirs
 
 def get_include_dirs():
+    import numpy
     dirs = []
     if 'FFTW_INCLUDE_DIR' in os.environ:
         entry = os.environ['FFTW_INCLUDE_DIR']
