@@ -213,6 +213,6 @@ if __name__ == '__main__':
           distclass=Dist,
           ext_modules=get_extensions(),
           install_requires=["mpi4py", "numpy"],
-          setup_requires=["setuptools>=18.0", "cython>=0.25"],
+          setup_requires=["cython>=0.25", "numpy>=0.23"],
           keywords=['Python', 'FFTW', 'FFT', 'DCT', 'DST', 'MPI']
          )
